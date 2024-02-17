@@ -24,6 +24,22 @@
             </div>
             <div class="col">
                 <div class="mb-3 mt-3">
+                    <h2 id="name">CALCULATOR</h2>
+
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <div class="mb-3 mt-3">
                     <input type="text" id="t1">
 
                 </div>
@@ -39,10 +55,10 @@
         <div class="row">
             <div class="col">
                 <div class="mb-3">
-                    <button type="button" class="btn btn-danger" id="1" onclick="c1()">1</button>
-                    <button type="button" class="btn btn-danger" id="2" onclick="c2()">2</button>
-                    <button type="button" class="btn btn-danger" id="3">3</button>
-                    <button type="button" class="btn btn-danger" id="add" onclick="cadd()">+</button>
+                    <button type="button" class="btn btn-danger" id="1" onclick="updateDisplay('1')">1</button>
+                    <button type="button" class="btn btn-danger" id="2" onclick="updateDisplay('2')">2</button>
+                    <button type="button" class="btn btn-danger" id="3" onclick="updateDisplay('3')">3</button>
+                    <button type="button" class="btn btn-danger" id="add" onclick="updateDisplay('+')">+</button>
 
                 </div>
 
@@ -53,10 +69,10 @@
         <div class="row ">
             <div class="col">
                 <div class="mb-3">
-                    <button type="button" class="btn btn-danger" id="4">4</button>
-                    <button type="button" class="btn btn-danger" id="5">5</button>
-                    <button type="button" class="btn btn-danger" id="6">6</button>
-                    <button type="button" class="btn btn-danger" id="dud">-</button>
+                    <button type="button" class="btn btn-danger" id="4" onclick="updateDisplay('4')"> 4</button>
+                    <button type="button" class="btn btn-danger" id="5" onclick="updateDisplay('5')">5</button>
+                    <button type="button" class="btn btn-danger" id="6" onclick="updateDisplay('6')">6</button>
+                    <button type="button" class="btn btn-danger" id="dud" onclick="updateDisplay('-')">-</button>
                 </div>
 
             </div>
@@ -65,10 +81,10 @@
         <div class="row">
             <div class="col">
                 <div class="mb-3">
-                    <button type="button" class="btn btn-danger" id="7">7</button>
-                    <button type="button" class="btn btn-danger" id="8">8</button>
-                    <button type="button" class="btn btn-danger" id="9">9</button>
-                    <button type="button" class="btn btn-danger" id="div">/</button>
+                    <button type="button" class="btn btn-danger" id="7" onclick="updateDisplay('7')">7</button>
+                    <button type="button" class="btn btn-danger" id="8" onclick="updateDisplay('8')">8</button>
+                    <button type="button" class="btn btn-danger" id="9" onclick="updateDisplay('9')">9</button>
+                    <button type="button" class="btn btn-danger" id="div" onclick="updateDisplay('/')">/</button>
                 </div>
 
             </div>
@@ -77,9 +93,9 @@
         <div class="row">
             <div class="col">
                 <div class="mb-3">
-                    <button type="button" class="btn btn-danger" id="0">0</button>
-                    <button type="button" class="btn btn-danger" id="mul">x</button>
-                    <button type="button" class="btn btn-dark s" id="clear" onclick="clear()">Clear</button>
+                    <button type="button" class="btn btn-danger" id="0" onclick="updateDisplay('0')">0</button>
+                    <button type="button" class="btn btn-danger" id="mul" onclick="updateDisplay('*')">x</button>
+                    <button type="button" class="btn btn-dark s" id="clear" onclick="clearDisplay()">Clear</button>
 
                 </div>
 
@@ -89,7 +105,7 @@
         <div class="row">
             <div class="col">
                 <div class="mb-3">
-                    <button type="button" class="btn btn-warning" id="cal" onclick="cal()">Calculate</button>
+                    <button type="button" class="btn btn-warning" id="cal" onclick="calculate()">Calculate</button>
                 </div>
 
             </div>

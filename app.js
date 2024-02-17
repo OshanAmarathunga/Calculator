@@ -1,45 +1,43 @@
-console.log("hello");
 
-function submit(){
-    let x=+document.getElementById("text 01").value;
-    let y=Number(document.getElementById("text 02").value);
-    console.log(x);
-    console.log(y);
+function clearDisplay() {
+    document.getElementById("t1").value = "";
+}
+
+function updateDisplay(v) {
+    document.getElementById("t1").value += v;
 }
 
 
-
-
-
-let btn1=document.getElementById("1");
-let btn2=document.getElementById("2")
-let btn3=document.getElementById("3")
-let btn4=document.getElementById("4")
-let btn5=document.getElementById("5")
-let btn6=document.getElementById("6")
-let btn7=document.getElementById("7")
-let btn8=document.getElementById("8")
-let btn9=document.getElementById("9")
-let btn0=document.getElementById("0")
-let btnAdd=document.getElementById("add")
-let btnDud=document.getElementById("dud")
-let btnMul=document.getElementById("mul")
-let btnDiv=document.getElementById("div")
-let btnCal=document.getElementById("cal")
-
-
-
-function clear(){
-    document.getElementById("t1").value="";
+function add(x, y) {
+    return x + y;
 }
 
-function c1(){
-    document.getElementById("t1").value="1";
+function subtract(x, y) {
+    return x - y;
 }
-function c2(){
-    document.getElementById("t1").value="2";
+
+function multiply(x, y) {
+    return x * y;
 }
-function cadd(){
-    let n1=document.getElementById("t1").value;
-    console.log(n1);
+
+function divide(x, y) {
+    if (y === 0) {
+        return "Error";
+    }
+    return x / y;
 }
+
+function calculate() {
+    var expression = document.getElementById("t1").value;
+    var result;
+    
+    result = eval(expression);
+    
+    if (!isNaN(result)) {
+        document.getElementById("t1").value = result;
+    } else {
+        document.getElementById("t1").value = "Error";
+    }
+}
+
+
